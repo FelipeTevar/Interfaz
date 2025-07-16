@@ -1,14 +1,7 @@
 import streamlit as st
-import time
 
-with st.spinner("Leyendo Documentos..."):
-    for i in range(100):
-        time.sleep(0.005)
-        st.progress(i + 1)
-st.success("¡Comparando Documentos!")
-
-# Contenido de la pantalla
 st.title("Pantalla Factura")
+
 st.text("Contenido:")
 st.text("Info datos documentos")
 
