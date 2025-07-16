@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(page_title="Pantalla Factura", layout="centered")
 st.title("Pantalla Factura")
 
 st.text("Contenido:")

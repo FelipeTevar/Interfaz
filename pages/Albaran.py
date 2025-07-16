@@ -1,6 +1,6 @@
-
 import streamlit as st
 
+st.set_page_config(page_title="Pantalla Albarán", layout="centered")
 st.title("Pantalla Albarán")
 
 st.text("Instrucción:")
