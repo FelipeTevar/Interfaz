@@ -1,17 +1,14 @@
-# Código para el archivo home.py con navegación a través de una pantalla de transición
-
 import streamlit as st
 
-# Título de la pantalla inicial
 st.title("Pantalla Inicial")
 
-# Botón para ir a Albarán con pantalla de transición
-if st.button("Ir a Albarán"):
-    st.experimental_set_query_params(destino="albaran")
-    st.switch_page("pages/Transicion.py")
-
-# Botón para ir a Factura con pantalla de transición
-if st.button("Ir a Factura"):
-    st.experimental_set_query_params(destino="factura")
-    st.switch_page("pages/Transicion.py")
-
+# Botones que redirigen a la pantalla de transición con el parámetro 'destino'
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("Ir a Albarán"):
+        st.query_params["destino"] = "albaran"
+        st.switch_page("pages/Transicion.py")
+with col2:
+    if st.button("Ir a Factura"):
+        st.query_params["destino"] = "factura"
+        st.switch_page("pages/Transicion.py")
