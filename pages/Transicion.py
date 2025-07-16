@@ -4,7 +4,7 @@ import time
 st.set_page_config(page_title="Transición", layout="centered")
 
 # Obtener el parámetro de destino desde la URL
-destino = st.query_params.get("destino", "").lower()
+destino = st.query_params.get("destino", "")
 
 
 # Mostrar pantalla de carga
