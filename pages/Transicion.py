@@ -6,13 +6,14 @@ st.set_page_config(page_title="Transición", layout="centered")
 # Obtener el parámetro de destino desde la URL
 destino = st.query_params.get("destino", "").lower()
 
+# Validar el destino
 if destino not in ["albaran", "factura"]:
     st.error("Destino no válido. No se puede redirigir.")
     st.stop()
 
+# Mostrar pantalla de carga
 st.title("Cargando...")
 
-# Spinner y barra de progreso
 with st.spinner("Leyendo Documentos..."):
     barra = st.progress(0)
     for i in range(100):
